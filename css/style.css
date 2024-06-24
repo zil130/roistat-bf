@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Suisse Intl';
+    src: url('../fonts/SuisseIntl-Regular-WebM.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +20,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: #E0EAFF;
 }
 
 .spot {
@@ -60,10 +69,13 @@ body {
     transition-duration: 0.2s;
 }
 
-.heading {
-    display: flex;
+.main {
     width: 1280px;
     margin: 0 auto;
+}
+
+.heading {
+    display: flex;
     padding-top: 112px;
     letter-spacing: 5px;
 }
@@ -91,4 +103,46 @@ body {
     margin-top: -180px;
     margin-left: -157px;
     z-index: -1;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 410px;
+    height: 137px;
+    margin-top: 32px;
+    margin-left: 217px;
+    font-family: 'Suisse Intl', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 52px;
+    padding-left: 24px;
+    padding-right: 19px;
+    background: #8F8FFF;
+    border: 1px solid #8F8FFF;
+    border-radius: 16px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: start;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+
+.btn:hover {
+    background: #A3A3FF;
+}
+
+.btn:active {
+    background: #6464FF;
 }
