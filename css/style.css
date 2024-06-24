@@ -5,12 +5,24 @@
 }
 
 body {
+    padding-top: 40px;
     background: #151515 url('../img/bg.png');
     background-size: cover;
     font-family: "Unbounded", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+.spot {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: url('../img/spot.png');
+    background-size: cover;
+    z-index: -1;
 }
 
 .header {
@@ -20,8 +32,8 @@ body {
     max-width: 1360px;
     width: 95%;
     height: 84px;
-    margin: 40px auto;
-    padding: 40px;
+    margin: 0 auto;
+    padding: 0 47px 0 40px;
     background: linear-gradient(to bottom, rgba(171, 171, 171, 0.1) 0%, rgba(147, 147, 147, 0.1) 100%);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(128, 128, 128, 0.2);
@@ -46,4 +58,37 @@ body {
     color: #8F8FFF;
     transition-property: color;
     transition-duration: 0.2s;
+}
+
+.heading {
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 112px;
+    letter-spacing: 5px;
+}
+
+.title {
+    font-size: 160px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 176px;
+}
+
+.title__first-word {
+    display: block;
+    color: #FFFFFF;
+    transform: rotate(7.01deg);
+}
+
+.title__second-word {
+    display: block;
+    margin-top: 27px;
+    color: #FE64FA;
+}
+
+.star {
+    margin-top: -180px;
+    margin-left: -157px;
+    z-index: -1;
 }
