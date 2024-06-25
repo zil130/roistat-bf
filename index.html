@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <title>roistat | чёрная пятница</title>
 </head>
 <body>
@@ -32,7 +34,7 @@
         <div class="benefit">
             <div class="benefit__desc">
                 <p>Воспользуйтесь выгодными предложениями от Roistat в ноябре*</p>
-                <button class="btn"><span>Получить выгоду</span> <img src="./img/arrow-right.svg" alt="arrow"></button>
+                <button class="btn-cb"><span>Получить выгоду</span> <img src="./img/arrow-right.svg" alt="arrow"></button>
             </div>
             <div class="benefit__note">
                 <p>*Акция не распространяется на подключение опций, лимитов, которые были подключены ранее до 1.11.2023.</p>
@@ -70,5 +72,28 @@
             <span>2023 black friday</span>
         </div>
     </section>
+
+    <div class="popup-wrapper">
+        <div class="popup">
+            <div class="popup-content">
+                <div class="form-title">
+                    <h2 class="form-title__heading">Регистрация</h2>
+                    <div class="close-icon"></div>
+                </div>
+                <form class="form-reg">
+                    <input class="input" type="text" name="name" placeholder="Имя">
+                    <input class="input" type="text" name="company" placeholder="Сайт компании">
+                    <input class="input phone" type="tel" name="phone" placeholder="Телефон">
+                    <label class="error-phone" for="phone"></label>
+                    <button class="btn-form" type="submit">Получить код</button>
+                </form>
+                <label class="privacy-notice">
+                    <input type="checkbox" name="consent" class="consent">
+                    <p>Отправляя сведения через электронную форму, вы даете согласие на обработку персональных данных, в том числе сбор, хранение и передачу третьим лицам представленной вами информации на условиях Политики обработки персональных данных.</p>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
