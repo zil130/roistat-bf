@@ -46,9 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    const formData = new FormData(form);
     const phoneNumber = iti.getNumber();
+    formData.set('phone', phoneNumber);
+
+    fetch('http://localhost:8000/process_form.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Ответ от сервера:', data);
+      form.reset();
+    })
     consentCheckbox.checked = false;
     popupWrapper.style.display = 'none';
-    phoneInput.value = '';
   });
 });
