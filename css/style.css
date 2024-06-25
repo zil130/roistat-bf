@@ -13,7 +13,7 @@
 }
 
 body {
-    padding-top: 40px;
+    padding: 40px 40px 0;
     background: #151515 url('../img/bg.png');
     background-size: cover;
     font-family: "Unbounded", sans-serif;
@@ -40,10 +40,9 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1360px;
-    width: 95%;
     height: 84px;
     margin: 0 auto;
-    padding: 0 47px 0 40px;
+    padding: 3px 47px 0 40px;
     background: linear-gradient(to bottom, rgba(171, 171, 171, 0.1) 0%, rgba(147, 147, 147, 0.1) 100%);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(128, 128, 128, 0.2);
@@ -53,6 +52,10 @@ body {
 .nav {
     display: flex;
     gap: 56px;
+}
+
+.burger {
+    display: none;
 }
 
 .link {
@@ -98,9 +101,12 @@ body {
 }
 
 .star {
-    margin-top: -180px;
-    margin-left: -157px;
+    width: 300px;
+    height: 332px;
+    margin-top: -178px;
+    margin-left: -143px;
     z-index: -1;
+    background: url(../img/star.png) no-repeat center center / cover;
 }
 
 .benefit {
@@ -234,14 +240,14 @@ body {
 
 .scroller-1,
 .scroller-3 {
-    animation: marquee-1 40s infinite linear;
-    animation-delay: -40s;
+    animation: marquee-1 200s infinite linear;
+    animation-delay: -200s;
 }
 
 .scroller-2,
 .scroller-4 {
-    animation: marquee-2 40s infinite linear;
-    animation-delay: -20s;
+    animation: marquee-2 200s infinite linear;
+    animation-delay: -100s;
 }
 
 .note {
@@ -268,5 +274,207 @@ body {
 
     100% {
         transform: translateX(-200%);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1339px) {
+    body {
+        padding: 40px 32px 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .heading {
+        padding-top: 72px;
+        letter-spacing: 3px;
+    }
+
+    .title {
+        font-size: 120px;
+        line-height: 132px;
+    }
+
+    .title__first-word {
+        transform: rotate(10.44deg);
+    }
+
+    .heading {
+        justify-content: space-between;
+        padding-right: 14px;
+    }
+
+    .star {
+        transform: rotate(-7deg);
+        width: 260px;
+        height: 269px;
+        margin-left: -99px;
+        margin-top: -140px;
+    }
+
+    .benefit__desc {
+        height: 124px;
+        margin-top: 24px;
+        margin-left: 164px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .benefit__note {
+        width: 387px;
+    }
+
+    .ticker-2 {
+        margin-top: -47px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        padding: 40px 20px 0;
+    }
+
+    .header {
+        padding: 3px 28px 0 20px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .heading {
+        padding-top: 58px;
+        letter-spacing: 3px;
+        justify-content: space-between;
+        padding-right: 14px;
+    }
+
+    .title {
+        font-size: 94px;
+        line-height: 103px;
+    }
+
+    .title__second-word {
+        margin-top: 8px;
+    }
+
+    .star {
+        width: 200px;
+        height: 209px;
+        margin-top: -91px;
+        margin-left: -85px;
+        transform: rotate(324deg);
+    }
+
+    .benefit__desc {
+        width: 500px;
+        height: 123px;
+        margin-top: 17px;
+        margin-left: 123px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .benefit__note {
+        margin-left: -230px;
+        width: 373px;
+    }
+
+    .ticker-1 {
+        margin-top: -206px;
+    }
+
+    .ticker-2 {
+        margin-top: -53px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    body {
+        padding: 20px 20px 0;
+    }
+
+    .header {
+        height: 80px;
+        padding: 3px 16px 0 20px;
+        border-radius: 16px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        width: 48px;
+        height: 48px;
+        background: url('../img/burger.svg');
+    }
+
+    .burger:hover {
+        cursor: pointer;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .heading {
+        padding-top: 60px;
+        letter-spacing: 1px;
+        justify-content: space-between;
+    }
+
+    .title {
+        font-size: 46px;
+        line-height: 50px;
+    }
+
+    .title__first-word {
+        transform: rotate(11.5deg);
+    }
+
+    .title__second-word {
+        margin-top: 23px;
+    }
+
+    .star {
+        width: 130px;
+        height: 120px;
+        margin-top: -92px;
+        margin-right: -42px;
+        transform: rotate(-52deg);
+    }
+
+    .benefit {
+        width: 100%;
+        height: 272px;
+        flex-direction: column;
+    }
+
+    .benefit__desc {
+        width: 100%;
+        height: 124px;
+        margin-left: 0;
+        margin-top: 65px;
+        line-height: 25px;
+        letter-spacing: -1px;
+    }
+
+    .benefit__note {
+        width: 100%;
+    }
+
+    .ticker-1 {
+        margin-top: 37px;
+    }
+
+    .ticker-2 {
+        margin-top: -8px;
     }
 }
